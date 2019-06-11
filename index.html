@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Movie Review | Review</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="star.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body onload="getRandomMedia()">
+		
+
+		<div id="site-content">
+			<header class="site-header" >
+				<div class="container"  >
+
+					<!-- ThinkBIG Logo Start-->
+					<a href="http://think-big.solutions/" id="branding">
+					<img src="logo.png" width="130" height="100"  alt=""  class="logo">
+
+					</a>
+					<!-- ThinkBIG Logo End-->
+
+					<!-- Subscribe START-->
+					<div class="col-md-2" style="float: right">
+						<div class="contact-form">
+							<input type="submit"
+								   disabled=disabled
+								   value="Subscribe"
+								   style="display: block; margin-bottom:14px; width: 100%; height:90px ">
+						</div>
+					</div>
+					<!-- Subscribe End-->
+
+					<!-- EMAIL & Authentication Token Handling START-->
+					<div class="col-md-2" style="float: right">
+						<div class="contact-form">
+							<input type="submit" value="Send Auth Token"
+								   style="display: block; margin-bottom:
+									   14px; width: 100%">
+
+							<input type="submit" value="Test Auth Token"
+								   style="display: block; width: 100%">
+						</div>
+					</div>
+
+					<div class="col-md-5" style="float: right">
+						<div class="contact-form">
+							<input id="email_input" type="text" class="email" placeholder="enter your email">
+							
+							
+							<input id="token_input" type="text" class="email" placeholder="enter your verification token">
+						</div>
+					</div>
+					<!-- EMAIL & Authentication Token Handling END-->
+				</div>
+
+			</header>
+
+
+			<main class="main-content">
+				<div class="container" >
+					<div class="page">
+
+
+						<div class="filters">
+							
+
+							<input type="checkbox" id="Drama" name="Drama"  
+									 >
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Drama</label>
+							 <input type="checkbox" id="Comedy" name="Comedy"
+									 >
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Comedy</label>
+							 <input type="checkbox" id="Action" name="Action"
+									>
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Action</label>
+							 <input type="checkbox" id="Fantasy" name="Fantasy"
+									>
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Fantasy</label>
+							 <input type="checkbox" id="Adventure" name="Adventure"
+									>
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Adventure</label>
+							 <input type="checkbox" id="Horror" name="Horror"
+									>
+							 <label for="scales"  style="color:blue; font-size:2.5ch;">Horror</label>
+							<br>
+						   
+							<input type="checkbox" id="2010" name="2010">
+							  <label for="scales"  style="color:black; font-size:2.5ch;">2010</label>
+							  <input type="checkbox" id="2011" name="2011">
+							  <label for="scales"  style="color:black; font-size:2.5ch;">2011</label>
+							  <input type="checkbox" id="2012" name="2012">
+							  <label for="scales"  style="color:black; font-size:2.5ch;">2012</label>
+							  <input type="checkbox" id="2013" name="2013">
+							  <label for="scales"  style="color:black; font-size:2.5ch;">2013</label>
+							  <input type="checkbox" id="2014" name="2014">
+							  <label for="scales"  style="color:black; font-size:2.5ch;">2014</label>
+							  <input type="checkbox" id="2015" name="2015">
+					          <label for="scales"  style="color:black; font-size:2.5ch;">2015</label>
+							  <input type="checkbox" id="2016" name="2016">
+					          <label for="scales"  style="color:black; font-size:2.5ch;">2016</label>				
+							
+
+							<form class="search-form" style="float: right">
+								<input id="search_input" type="text" placeholder="Search...">
+								<button type="button"><i class="fa fa-search"></i></button>
+							</form>
+							
+						</div>
+
+
+						<div id="media" class="movie-list"  >
+        
+					</div>
+					<button class="button" style="float: right">Next</button>
+				</div> <!-- .container -->
+			</main>
+
+
+
+
+
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">About Us</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tempore vitae mollitia nesciunt saepe cupiditate</p>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Recent Review</h3>
+								<ul class="no-bullet">
+									<li>Lorem ipsum dolor</li>
+									<li>Sit amet consecture</li>
+									<li>Dolorem respequem</li>
+									<li>Invenore veritae</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Help Center</h3>
+								<ul class="no-bullet">
+									<li>Lorem ipsum dolor</li>
+									<li>Sit amet consecture</li>
+									<li>Dolorem respequem</li>
+									<li>Invenore veritae</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Join Us</h3>
+								<ul class="no-bullet">
+									<li>Lorem ipsum dolor</li>
+									<li>Sit amet consecture</li>
+									<li>Dolorem respequem</li>
+									<li>Invenore veritae</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Social Media</h3>
+								<ul class="no-bullet">
+									<li>Facebook</li>
+									<li>Twitter</li>
+									<li>Google+</li>
+									<li>Pinterest</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="widget">
+								<h3 class="widget-title">Newsletter</h3>
+								<form action="#" class="subscribe-form">
+									<input type="text" placeholder="Email Address">
+									<input type="submit" value="Submit"  style="margin-bottom: 50px;">
+									
+								</form>
+							</div>
+						</div>
+					</div> <!-- .row -->
+
+					<div class="colophon">Copyright 2014 Company name, Designed by Themezy. All rights reserved</div>
+				</div> <!-- .container -->
+
+			</footer>
+		</div>
+		<!-- Default snippet for navigation -->
+		
+
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/capp.js"></script>
+	
+
+	</body>
+
+</html>
